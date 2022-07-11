@@ -39,5 +39,15 @@ namespace C4test
         {
             Application.Exit();
         }
+
+      
+
+        private void OkBtn_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyValue == (char)Keys.Enter)
+            {
+                OkBtn.PerformClick();
+            }
+        }
     }
 }

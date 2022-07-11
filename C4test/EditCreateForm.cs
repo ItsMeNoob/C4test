@@ -96,9 +96,10 @@ namespace C4test
 
         private void SaveBtn_Click(object sender, EventArgs e)
         {
-            
-                      //if (cbSupportediTypes.Text == "JPG"){ typeimg1 = 1;} else { typeimg1 = 2; }
-            if (int.TryParse(cbSupportediTypes.SelectedValue.ToString(), out typeimg1))
+
+            //if (cbSupportediTypes.Text == "JPG"){ typeimg1 = 1;} else { typeimg1 = 2; }
+            if (int.TryParse(cbSupportediTypes.SelectedValue.ToString(), out typeimg1) == false)
+            { typeimg1 = 3;  }
             
              if (cbProjectEnabled.Checked == true) { projectEnb = 1; } else { projectEnb = 0; }
 
@@ -139,7 +140,7 @@ namespace C4test
             }
             else
             {
-                cbSupportediTypes.SelectedIndex = -1;
+                cbSupportediTypes.SelectedIndex = 3;
                 cbSupportediTypes.Enabled = false;
             }
         }
